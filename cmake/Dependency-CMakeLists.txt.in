@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.7)
+
+project(@DD_NAME@-download)
+
+include(ExternalProject)
+
+ExternalProject_Add(@DD_NAME@
+    URL "@DD_URL@"
+    URL_HASH @DD_HASH@
+    SOURCE_DIR "@CMAKE_CURRENT_BINARY_DIR@/@DD_NAME@"
+    TLS_VERIFY ON
+    DOWNLOAD_NO_PROGRESS ON
+    CONFIGURE_COMMAND ""
+    BUILD_COMMAND ""
+    INSTALL_COMMAND ""
+    TEST_COMMAND ""
+)
